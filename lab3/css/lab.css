@@ -1,5 +1,11 @@
-body {background-color: #000000}
-.content {
+body {background-color: #000000
+  color: white;
+}
+ p {
   font-family: 'Raleway', sans-serif;
   color: white;
+}
+h1 {
+ font-family: 'Raleway', sans-serif;
+ color: white;
 }
