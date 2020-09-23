@@ -21,7 +21,7 @@ function reverseString(myString){
     return myString.split('').reverse().join('');
 }
 reverseString('Are you suggesting coconuts migrate');
-document.write(reverseString('Are you suggesting coconuts migrate' .));
+document.write(reverseString('Are you suggesting coconuts migrate'));
 
 
 //sortUserName -  a function that takes user input and sorts the letters
