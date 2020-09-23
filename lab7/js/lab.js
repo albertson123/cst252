@@ -14,7 +14,6 @@ function reverseSort(myArray) {
 }
 var myNumArray = [22, 56, 69, 18, 13, 10];
 console.log(reverseSort(myNumArray));
-document.write(console.log(reverseSort(myNumArray)));
 
 //will reverse the string phrase I type
 function reverseString(myString){
