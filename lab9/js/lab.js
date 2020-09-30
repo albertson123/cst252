@@ -4,7 +4,7 @@
 */
 
 var outputEl =
-document.getElementById("div");
+document.createElement("p");
 document.body.appendChild(outputEl);
 
 var new1El =
@@ -12,10 +12,10 @@ document.createElement("p");
 
 new1El.innerHTML = "Rispy Cripsy Chris Pratt";
 document.body.appendChild(new1El);
-new1El.style.color = "red";
+new1El.style.backgroundcolor = "red";
 
 var new2El =
 document.createElement("p2");
 new2El.innerHTML = "One does not simply escape the coronavirus";
-new2El.style.color = "blue";
+new2El.style.backgroundcolor = "blue";
 document.body.appendChild(new2El);
