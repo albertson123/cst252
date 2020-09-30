@@ -1,0 +1,44 @@
+body {
+  color: #F0FFFF;
+  background-color: rgb(0, 0, 0);
+  font-size: 120%;
+}
+
+#content {
+  background-color: rgba(139, 0, 139, 0.2);
+  padding: 180px;
+  margin: 50px;
+  margin-top: 60px;
+  font-family: Helvetica;
+}
+
+pre {
+  display: block;
+  font-family: Helvetica;
+  white-space: pre;
+  margin: 1em 0;
+}
+
+img {
+  width: 700px;
+  margin: auto;
+  border: double 4px black;
+  margin: 5px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+a {
+  color: #ea893f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
