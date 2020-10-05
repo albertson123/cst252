@@ -1,40 +1,32 @@
 /*Author: Caden Albertson <calbertson@csumb.edu>
 *Created: 27 September
 *License: Public Domain
+*Credit to: Wes Modes and their lecture notes, Val and Ashlyn for their help, and Kayla's friend Xue Ee for letting us be inspired by her code
 */
 
-function firstThing(test) {
-  console.log(test + ": This is the first thing.<br>")
-}
-function secondThing(test) {
-  console.log(test + ": This is the second thing.<br>")
-}
-function thirdThing(test) {
-  console.log(test + ": This is the third thing.<br>")
-}
+//create an event handler
+var button = document.getelementById("my-button");
+console.log("Button baybee", button);
 
-firstThing("TEST 1");
-secondThing("TEST 1");
-thirdThing("TEST 1");
+button.addEventListener("click", function () {
+  //button is pressed and user is prompted to add their name to the functions
+  var name = document.getElementById("user-name").value;
+  console.log("Name is", name);
+  //changes from greeting to hello and user
+  var heading = document.getElementById("heading");
+  console.log("heading", heading);
+  heading.innerHTML = "Hello," + name;
 
-//test 2 - in order
-setTimeout(function() {
-  firstThing("TEST 2");
-}, 0);
-setTimeout(function() {
-  secondThing("TEST 2");
-}, 0);
-setTimeout(function() {
-  thirdThing("TEST 2");
-}, 0);
+  //string to array
+  var nameArray = name.split('');
+  console.log("nameArray", nameArray)
 
-//test 3 - order is 3, 2, 1
-setTimeout(function() {
-  firstThing("TEST 3");
-}, 3000);
-setTimeout(function() {
-  secondThing("TEST 3");
-}, 2000);
-setTimeout(function() {
-  thirdThing("TEST 3");
-}, 1000);
+  //sorting
+  var nameArraySort = nameArray.sort();
+  console.log("nameArraySort=", nameArraySort);
+
+  //back together string
+  var nameSorted = nameArraySort.join('');
+  console.log("nameSorted=", nameSorted);
+  heading.innerHTML = "Hello, " + nameSorted;
+})
