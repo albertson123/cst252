@@ -5,7 +5,7 @@
 */
 
 //create an event handler
-var button = document.getelementById("my-button");
+var button = document.getElementById("my-button");
 console.log("Button baybee", button);
 
 button.addEventListener("click", function () {
