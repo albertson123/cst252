@@ -42,3 +42,10 @@ a:hover {
   color: white;
   text-decoration: underline;
 }
+
+.fancy-button {
+  /* font-size: 3em; */
+  background-color: #444;
+  color: white;
+  font-family: cursive;
+}

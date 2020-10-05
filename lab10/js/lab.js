@@ -4,29 +4,22 @@
 *Credit to: Wes Modes and their lecture notes, Val and Ashlyn for their help, and Kayla's friend Xue Ee for letting us be inspired by her code
 */
 
-//create an event handler
-var button = document.getElementById("my-button");
-console.log("Button baybee", button);
+var button = document.getElementById("myButton");
+var input = document.getElementById("input");
+var heading = document.getElementById("heading");
 
-button.addEventListener("click", function () {
-  //button is pressed and user is prompted to add their name to the functions
-  var name = document.getElementById("user-name").value;
-  console.log("Name is", name);
-  //changes from greeting to hello and user
-  var heading = document.getElementById("heading");
-  console.log("heading", heading);
-  heading.innerHTML = "Hello," + name;
+function buttonPress() {
 
-  //string to array
-  var nameArray = name.split('');
-  console.log("nameArray", nameArray)
+  // get input from field
+  var inputText = input.value;
 
-  //sorting
-  var nameArraySort = nameArray.sort();
-  console.log("nameArraySort=", nameArraySort);
+  // add input to h1
+  heading.innerText = "Hello, " + inputText;
 
-  //back together string
-  var nameSorted = nameArraySort.join('');
-  console.log("nameSorted=", nameSorted);
-  heading.innerHTML = "Hello, " + nameSorted;
-})
+  // clear field value
+  input.value = "";
+
+  input.focus();
+}
+
+button.addEventListener("click", buttonPress);
