@@ -23,12 +23,8 @@ housesArray = [
    }
 ]
 
-credit = '<div class="credits">Personality house descriptions courtesy of <a href="https://www.urbandictionary.com/">iamjustdandi</a></div>';
-
-
-// Return Soft, Chaotic, Cursed, and Feral
-// depending on length mod 4
-function sortingHatLength(str) {
+// These are the conditional options that will be assigned to the user.
+function houseSort(str) {
  len = str.length;
  mod = len % 4;
  if (mod == 0) {
@@ -45,37 +41,11 @@ function sortingHatLength(str) {
  }
 }
 
-// take a string and return a hashed checksum of the string
-// from https://stackoverflow.com/questions/26057572/
-function checksum(s) {
- var hash = 0, strlen = s.length, i, c;
- if ( strlen === 0 ) {
-   return hash;
- }
- for ( i = 0; i < strlen; i++ ) {
-   c = s.charCodeAt( i );
-   hash = ((hash << 5) - hash) + c;
-   hash = hash & hash; // Convert to 32bit integer
- }
- return hash;
-};
-
-// Given a name, hash the string, and
-// return Soft, Chaotic, Cursed, and Feral
-function sortingHatHash(str) {
- checksumValue = checksum(str);
- mod = Math.abs(checksumValue) % housesArray.length;
- return housesArray[mod];      // returns an object from the array
-}
-
-var myButton = document.getElementById("button");
+var myButton = document.getElementById("mybutton");
 myButton.addEventListener("click", function() {
- // get value from input field
- var name = document.getElementById("input").value;
- // use name to get house from SortingHat function
- var houseObj = sortingHatHash(name);
- // output to output div (adding some text and HTML around the results)
- newText = "<h3>This man with a plan has sorted you into " + houseObj.title + "</h3>" +
-         "<p>" + houseObj.text + "</p>" + credit;
+var name = document.getElementById("input").value;
+  var house = houseSort(name);
+  newText = "<h3>This man with a plan has sorted you into " + house.title + "</h3>" +
+         "<p>" + house.text + "</p>" + credit;
  document.getElementById("output").innerHTML = newText;
 })
