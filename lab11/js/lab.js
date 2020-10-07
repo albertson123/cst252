@@ -1,7 +1,7 @@
 /*Author: Caden Albertson <calbertson@csumb.edu>
 *Created: 27 September
 *License: Public Domain
-*Credit to: Wes Modes for their inspirational code
+*Credit to: Wes Modes for their inspirational code, Eddie and Val for helpiung the the best they could to succeed in showoing this code.
 */
 
 housesArray = [
