@@ -1,40 +1,50 @@
 /*Author: Caden Albertson <calbertson@csumb.edu>
-*Created: 27 September
+*Created: 11 October
 *License: Public Domain
+*Wes for their knowledge and slides, and Val for saving my beans and helping me get through this lab
 */
 
-function firstThing(test) {
-  console.log(test + ": This is the first thing.<br>")
-}
-function secondThing(test) {
-  console.log(test + ": This is the second thing.<br>")
-}
-function thirdThing(test) {
-  console.log(test + ": This is the third thing.<br>")
-}
+//Generate the viewable counting list
+for (i = 1; i <= 200; i++) {
+  outputEl = document.getElementById("output");
+  newEl = document.createElement("p");
 
-firstThing("TEST 1");
-secondThing("TEST 1");
-thirdThing("TEST 1");
+  //conditions that will also appear
 
-//test 2 - in order
-setTimeout(function() {
-  firstThing("TEST 2");
-}, 0);
-setTimeout(function() {
-  secondThing("TEST 2");
-}, 0);
-setTimeout(function() {
-  thirdThing("TEST 2");
-}, 0);
+    if (i%105 ==0) {
+      newEl.innerHTML = i + " - FizzBuzzBoom";
+      outputEl.appendChild(newEl);
+      console.log("FizzBuzzBoom");
 
-//test 3 - order is 3, 2, 1
-setTimeout(function() {
-  firstThing("TEST 3");
-}, 3000);
-setTimeout(function() {
-  secondThing("TEST 3");
-}, 2000);
-setTimeout(function() {
-  thirdThing("TEST 3");
-}, 1000);
+    } else if (i%21 ==0) {
+      newEl.innerHTML = i + " - FizzBoom";
+      outputEl.appendChild(newEl);
+      console.log("FizzBoom");
+
+    } else if (i%15 ==0) {
+      newEl.innerHTML = i + " - FizzBuzz";
+      outputEl.appendChild(newEl);
+      console.log("FizzBuzz");
+
+    } else if (i%3 == 0) {
+      newEl.innerHTML = i + " - Fizz";
+      outputEl.appendChild(newEl);
+      console.log("Fizz");
+
+    } else if (i%5 ==0) {
+      newEl.innerHTML = i + " - Buzz";
+      outputEl.appendChild(newEl);
+      console.log("Buzz");
+
+    } else if (i%7 ==0) {
+      newEl.innerHTML = i + " - Boom"
+      outputEl.appendChild(newEl);
+      console.log("Boom");
+
+    } else {
+      outputEl.appendChild(newEl);
+      console.log(i);
+
+
+  }
+}
