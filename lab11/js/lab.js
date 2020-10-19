@@ -24,10 +24,10 @@ function houseSort(str) {
  }
 }
 
-var myButton = document.getElementById("mybutton");
-myButton.addEventListener("click", function() {
-var name = document.getElementById("input").value;
-  var house = houseSort(name);
-  newText = "<p>Based on the answer you provided, your visible aura is clearly " + house + "</p>";
- document.getElementById("output").innerHTML = newText;
+  var myButton = document.getElementById("mybutton");
+  myButton.addEventListener("click", function() {
+  var name = document.getElementById("input").value;
+    var house = houseSort(name);
+    newText = "<p>Based on the answer you provided, your visible aura is clearly " + house + "</p>";
+  document.getElementById("output").innerHTML = newText;
 })
