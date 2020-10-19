@@ -28,7 +28,6 @@ var myButton = document.getElementById("mybutton");
 myButton.addEventListener("click", function() {
 var name = document.getElementById("input").value;
   var house = houseSort(name);
-  newText = "<h3>This man with a plan has sorted you into " + house.title + "</h3>" +
-         "<p>" + house.text + "</p>" + credit;
+  newText = "<p>Based on the answer you provided, your visible aura is clearly " + house + "</p>";
  document.getElementById("output").innerHTML = newText;
 })
