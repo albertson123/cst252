@@ -14,6 +14,6 @@ function Vehicle(make, model, year, color, extras) {
     return this.make + " from " + this.sound + " that's " + this.year + this.color + " and, in fact, " + this.extras;
   }
 }
-var dragon = new Vehicle("Dragon", "Westeros", "7 AC", "Quicksilver", "will breathe fire");
+var dragon = new Vehicle("Dragon", "Westeros", 7, "Quicksilver", "will breathe fire");
 
-document.getElementById("output").innerHTML += "<p>" + dragon.info() + "</p>"
+document.getElementById("output").innerHTML += "The vehicle that I drive is a " + dragon.info() + "</p>";
