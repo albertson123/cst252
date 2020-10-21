@@ -16,4 +16,4 @@ function Vehicle(make, model, year, color, extras) {
 }
 var dragon = new Vehicle("Dragon", "Westeros", "7 AC", "Quicksilver", "will breathe fire");
 
-document.getElementById("output").innerHTML += "<p>" + Vehicle.info() + "</p>"
+document.getElementById("output").innerHTML += "<p>" + dragon.info() + "</p>"
