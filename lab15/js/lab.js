@@ -1,19 +1,30 @@
 /*Author: Caden Albertson <calbertson@csumb.edu>
-*Created: 27 September
+*Created: 25 October
 *License: Public Domain
+*Credit to: Tyler Wilson for his inspiring code recipe, and Val Ramirez for running so I could walk
 */
 
-function Vehicle(make, model, year, color, extras) {
-  this.make = make;
-	this.model = model;
-  this.year = year;
-  this.color = color;
-  this.extras = extras;
-
-  this.says = function() {
-    return this.make + " from " + this.sound + " that's " + this.year + this.color + " and, in fact, " + this.extras;
+class Car {
+  constructor(brand, model, year, color) {
+    this.carname = brand;
+    this.carmodel = model;
+    this.caryear = year;
+    this.carcolor = color;
+  }
+  info() {
+    return "I have a " + this.carname + " " + this.carmodel + " " + this.caryear + " " + this.carcolor + ".";
   }
 }
-var dragon = new Vehicle("Dragon", "Westeros", 7, "Quicksilver", "will breathe fire");
 
-document.getElementById("output").innerHTML += "The vehicle that I drive is a " + dragon.info() + "</p>";
+mycar = new Car("Dragon", "Westeros", "7 AC", "Quicksilver");
+// mycar.info()
+// << "I have a Ford"
+
+
+// document.getElementById("output").innerHTML += "<p>" + mycar.info() + "</p>";
+
+
+
+
+
+//use mycar.info() to call the function.
