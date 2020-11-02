@@ -1,11 +1,11 @@
 body {
-  color: #FFFAFA;
+  color: #FFFF00;
   background-color: rgb(75, 0, 130);
   font-size: 120%;
 }
 
 #content {
-  background-color: rgba(75, 0, 130, 0.4);
+  background-color: rgba(25, 25, 112, 0.5);
   padding: 120px;
   margin: 100px;
   margin-top: 110px;
