@@ -2,12 +2,18 @@
 //*Created: 1 November
 //*License: Public Domain
 //*Credit to: Eddie Aleman and Val Ramirez for troubleshooting and showing me the ropes
-$(document).ready(function(){
-  $("button").click(function(){
-    alert("This button has been, heh, klicked.")
-  });
-});
+// The functions below will change the color of the text when pressed.
 
-$("button").css("color", "green");
+  // This changes the "Challenge" section to red.
+    $(document).ready(function(){
+      $("#challenge-button").click(function(){
+          $("#challenge").css({"color": "red"});},
+      );
+    });
 
-$(.challenge)
+      // This changes the "Results" section to yellow.
+        $(document).ready(function(){
+          $("#results-button").click(function(){
+              $("#results").css({"color": "yellow"});},
+          );
+        });
