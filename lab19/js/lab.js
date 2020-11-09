@@ -1,45 +1,35 @@
 /*Author: Caden Albertson <calbertson@csumb.edu>
-*Created: 25 October
+*Created: November 8
 *License: Public Domain
-*Credit to: Tyler Wilson for his inspiring code recipe, and Val Ramirez for running so I could walk
+*Credit to: Wes Modes for their JS fiddle example to go off of, and Val for helping me link this to my HMTL
 */
+endpoint="https://api.whatdoestrumpthink.com/api/v1/quotes/random"
 
-class Car {
-  constructor(brand, model, year, color) {
-    this.carname = brand;
-    this.carmodel = model;
-    this.caryear = year;
-    this.carcolor = color;
-  }
-  info() {
-    return "I have a " + this.carname + " " + this.carmodel + " " + this.caryear + " " + this.carcolor + ".";
-  }
-}
-
-mycar = new Car("Dragon", "Westeros", "7 AC", "Quicksilver");
-// mycar.info()
-// << "I have a Ford"
-
-
-// document.getElementById("output").innerHTML += "<p>" + mycar.info() + "</p>";
-
-// ------------------- Task 2: Design an OOP Design for Hangman -------------------
-
-document.getElementById("output").innerHTML += "<p>" + "To view the second task for this lab, click on the link below." + "</p>";
-
-// this code was shared with me from val and is a psudocode for hangman, it is up to step 4 cause after that the it became slightly confusing
-
-      // set up the game
-          // create player
-          // create game board
-
-      // start the game loop [Hangman]
-          // render the board
-          // render alphabet
-          // Player selects letters to play the game
-              // if player guesses letters correctly then game ends
-              // stop looping
-          // Else
-              // Keep looping until Player reaches max amount of tries
-              // End Screen with a big old "You Lose :("
-              // Switch to next player and continue looping
+// add event listener
+$("#activate").click(function(){
+  // alert("pressed");
+	$.ajax({
+      // The URL for the request
+    url: endpoint,
+    // The data to send (will be converted to a query string)
+    data: {
+    	latitude: "45.575",
+      longitude: "-124.565",
+      api_key: "5JNF4JJDJ33J3JH402900"
+    },
+    // Whether this is a POST or GET request
+    type: "GET",
+    // The type of data we expect back
+    dataType : "json",
+  })
+  // If the request succeeds
+  .done(function( data ) {
+      // alert("Success!");
+      var quote = data.message;
+      $("#output").append("<p>" + quote)
+  })
+  // If the request fails
+  .fail(function( xhr, status, errorThrown ) {
+      console.log(errorThrown + " Status:" + status );
+	})
+})
