@@ -1,7 +1,7 @@
 /*Author: Caden Albertson <calbertson@csumb.edu>
-*Created: 25 October
+*Created: 29 November
 *License: Public Domain
-*Credit to: Tyler Wilson for his inspiring code recipe, and Val Ramirez for running so I could walk
+*Credit to: Wes Modes and Val for inspiring me and helping supply this recipe
 */
 
 //The information below will use JSON to allow us to link the comic into our webpage
